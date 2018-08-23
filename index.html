@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="plugins/animate%2banimo.css">
   <link rel="stylesheet" href="plugins/csspinner.min.css">
   <link rel="stylesheet" href="css/app.css">
+  <link rel="stylesheet" href="css/phpwallet1.css">
   <script src="js/modernizr.js"></script>
   <script src="js/fastclick.js"></script>
 
@@ -49,10 +50,27 @@
           </li>
         </ul>
         <ul class="nav navbar-nav navbar-right mt0">
-          <li class="dropdown dropdown-list">
+          <li class="dropdown">
             <a href="#" data-toggle="dropdown" data-play="fadeIn" class="dropdown-toggle">
                      <strong><i class="fa fa-btc"></i> Wallet</strong>
                      </a>
+                     <!-- php wallet -->
+                   
+                     <div class="dropdown-menu table-responsive card mb-3 bg-dark text-white">
+                   <div class="card-header"><h4 style="text-align:center;font-size:20px">BALANCE</h4></div>
+
+                   <div class="card-body">
+                       <h5>Available <span class="text-primary"> INR </span></h5>
+                       <h1><i class="fa fa-inr"></i> 0.00</h1>
+                   </div>
+                   <div class="card-footer">
+                       <div class="btn-group btn-group-justified" role="group" aria-label="...">
+                           <button style="width:;font-size:20px" class="btn-outline-light" type="button" name="button">Withdrawal</button>
+                           <button style="width:150px;font-size:20px" class="btn-outline-light" type="button" name="button">Deposit</button>
+                       </div>
+                   </div>
+               </div>
+                     <!-- php wallet close -->
           </li>
           <li class="dropdown dropdown-list">
             <a href="#" data-toggle="dropdown" data-play="fadeIn" class="dropdown-toggle">
@@ -220,7 +238,7 @@
       <!-- ticker close-->
 
       <section class="main-content">
-        <button type="button" class="btn btn-labeled btn-primary pull-right" onclick="wallet.html">
+        <button type="button" class="btn btn-labeled btn-primary pull-right" onclick="location.href='wallet.html'">
                <span class="btn-label"><i class="fa fa-dollar"></i>
                </span>Goto Wallet</button>
         <h3>Dashboard
