@@ -5,12 +5,8 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
-  <meta content="Responsive Bootstrap Multi-Purpose Crypto Trading User Interface" name="description" />
-  <meta name="keywords" content="crypto, Bootstrap, bitcoins, ethereum, dogecoin, iota, ripple, siacoin, exchange, trading platform, crypto trading">
-  <meta name="author" content="">
   <title>DBS Stock Trader</title>
   <link rel="stylesheet" href="css/bootstrap.css">
-  <link rel="stylesheet" href="css/font-awesome.css">
   <link rel="stylesheet" href="plugins/animate%2banimo.css">
   <link rel="stylesheet" href="plugins/csspinner.min.css">
   <link rel="stylesheet" href="css/app.css">
@@ -20,24 +16,54 @@
   <link rel="stylesheet" href="css/wallet.css">
   <link rel="stylesheet" href="css/wallet2.css">
   <link rel="stylesheet" href="css/phpwallet1.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"> -->
-  <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script> -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+  <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+  <link rel="stylesheet" href="css/payment.css">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
   <script>
     $(document).ready(function() {
       $("#deposit").click(function() {
         $("#add_money").fadeIn(10, function() {
-          $("#money_status").fadeOut(10, function() {
+          $("#inr_wallet").fadeOut(10, function() {
               $("#add").click(function() {
-                $("#iframe1").fadeIn(10,function(){
-                  $("#add_money").fadeOut(10, function() {});
+                $("#add_money4").fadeIn(10,function(){
+                  $("#add_money").fadeOut(10, function() {
+                     $("#submit1").click(function() {
+                        $("#success").fadeIn(10,function(){
+                            $("#add_money4").fadeOut(10,function(){
+                                setTimeout(function(){location.href="wallet.html";}, 2000);
+                              });
+                        });
+                    });
+                  });
                 });
             });
           });
         });
       });
+      $("#withdraw").click(function() {
+         $("#add_money").fadeIn(10, function() {
+           $("#inr_wallet").fadeOut(10, function() {
+               $("#add").click(function() {
+                   $("#add_money").fadeOut(10, function() {
+                      $("#success1").fadeIn(10,function(){
+                          setTimeout(function(){location.href="wallet.html";}, 2000);
+                   });
+                 });
+               });
+            });
+         });
+      });
     });
+  </script>
+  <script>
+  function sync() {
+    var a = document.getElementById('enter_amount').value;
+    document.getElementById('net_amount').value = a - (a * (0.02));
+  }
   </script>
 </head>
 
@@ -61,8 +87,8 @@
         </ul>
         <ul class="nav navbar-nav navbar-right mt0">
           <li class="dropdown dropdown-list">
-            <a href="wallet.html" data-toggle="dropdown" data-play="fadeIn" class="dropdown-toggle">
-                     <strong><i class="fa fa-btc"></i> Wallet</strong>
+            <a href="" onclick="location.href='wallet.html'" data-toggle="dropdown" data-play="fadeIn" class="dropdown-toggle">
+                     <strong><i class="fa fa-inr"></i> Wallet</strong>
                      </a>
           </li>
           <li class="dropdown dropdown-list">
@@ -144,8 +170,6 @@
             <ul class="dropdown-menu">
               <li><a href="#">Profile</a>
               </li>
-              <li><a href="#">Settings</a>
-              </li>
               <li class="divider"></li>
               <li><a href="landing.html">Logout</a>
               </li>
@@ -169,11 +193,11 @@
               </div>
             </div>
             <ul class="nav collapse">
-              <li><a href="#open_orders">Open Orders</a>
+              <li><a onclick="location.href='index.html#open_orders'">Open Orders</a>
               </li>
-              <li><a href="#history">Transactions History</a>
+              <li><a onclick="location.href='index.html#history'">Transactions History</a>
               </li>
-              <li><a href="#market">Market History</a>
+              <li><a onclick="location.href='index.html#market'">Market History</a>
               </li>
               <li>
                 <a href="javascript:void(0);">
@@ -184,28 +208,35 @@
             </ul>
           </li>
           <li class="active">
-            <a href="index.html" title="Markets" data-toggle="collapse-next">
+            <a href="index.html" onclick="location.href='index.html'" title="index" data-toggle="collapse-next">
                         <em class="fa fa-home"></em>
                         <div class="label pull-right"><i class="fa fa-line-chart"></i></div>
                         <span class="item-text">Markets</span>
                      </a>
-
+            </li>
             <li>
-              <a href="prices.html" title="Dashboard" class="">
+              <a href="portfolio.html" title="Dashboard" class="">
                         <em class="fa fa-btc"></em>
-                        <span class="item-text">Live Pricing</span>
+                        <span class="item-text">Portfolio</span>
                      </a>
             </li>
             <li class="">
-              <a href="datatable.html" title="Dashboard" class="">
+              <a onclick="location.href='index.html#order_book'" title="Dashboard" class="">
                         <em class="fa fa-gear"></em>
                         <span class="item-text">Order Book</span>
                      </a>
             </li>
             <li>
-              <a title="Pages" href="#history">
+              <a title="Pages" onclick="location.href='index.html#history'" href="#history">
                      <em class="fa fa-file-text"></em>
                      <span class="item-text">My Order History</span>
+                     </a>
+
+            </li>
+            <li>
+              <a title="Pages" href="#history">
+                     <em class="fa fa-bell"></em>
+                     <span class="item-text">Transaction status</span>
                      </a>
 
             </li>
@@ -215,81 +246,88 @@
 
 
     <section>
-      <section class="main-content">
+      <section id="whole_page" class="main-content">
 
-        <!-- Money Status -->
-    <div style="width:100%">
-        <div style="width:50%;float:left" class="row margin-0" id="money_status">
-          <div class="col-lg-12 col-md-12 col-sm-12">
-            <div class="row margin-bottom-10">
-              <div class="col-lg-12 col-md-12 col-sm-12 wallets-container card white-background">
-                <div class="row">
-                  <div class="col-lg-12 col-md-12 col-sm-12 header">
-                    <table>
-                      <tbody>
-                        <tr>
-                          <td style="padding-top:0px;padding-left:98px;">
-                            <img src="images/moneybag.png" style="width: 60px;margin-right:6px;">
-                          </td>
-                          <td style="padding-top:20px;padding-left:9px;">
-                            <b style="color:black;font-weight:700;font-size:28px;">INR WALLET</b>
-                          </td>
-                        </tr> <br/>
-                      </tbody>
-                    </table>
-                  </div>
-                </div>
-                <div class="row">
-                   <br/> <br/>
-                  <div class="col-lg-12">
-                    <table class="table" style="width:40%">
-                      <thead>
-                        <tr>
-                          <th style="font-size:18px">TOTAL ASSETS</th>
-                          <th style="font-size:18px">EFFECTIVE AVAILABLE</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <td style="font-size:20px;" class="ng-binding">
-                            0.00
-                            <span class="inrLabel">INR</span>
-                          </td>
-                          <td style="font-size:20px;" class="ng-binding">
-                            0.00
-                            <span class="inrLabel">INR</span>
-                          </td>
-
-                        </tr>
-                      </tbody>
-                    </table>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+        <!-- Success message -->
+      <div id="success" class="container" style="display:none;width:50%;margin-bottom:20px">
+        <div  class="alert alert-success alert-dismissible fade in">
+          <a href="wallet.html" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+          <strong>Deposit Success!</strong> Happy Trading.
         </div>
-        <!-- <button id="deposit" type="button" class="btn btn-success btn-block bold deposit_button" data-toggle="modal" data-target="#DepositModal" data-max="50000" data-min="10" data-name="Credit Card" data-id="4" style="width:200px; align:center">
-       <i class="fa fa-money"></i> DEPOSIT NOW
-       </button> -->
+      </div>
+        <!-- Success message close-->
 
-       <!-- php wallet -->
-       <div style="width:50%;float:right;height:292px" class="card mb-3 bg-dark text-white">
-     <div class="card-header"><h4 style="text-align:center;font-size:28px">BALANCE</h4></div>
+        <!-- Success1 message -->
+      <div id="success1" class="container" style="display:none;width:50%;margin-bottom:20px">
+        <div  class="alert alert-success alert-dismissible fade in">
+          <a href="wallet.html" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+          <strong>Withdrawal Success!</strong> Happy Trading.
+        </div>
+      </div>
+        <!-- Success1 message close-->
 
-     <div class="card-body" style="height:180px">
-         <h5>Available <span class="text-primary"> INR </span></h5>
-         <h1><i class="fa fa-inr"></i> 0.00</h1>
-     </div>
-     <div class="card-footer">
-         <div class="btn-group btn-group-justified" role="group" aria-label="...">
-             <button style="width:150px;font-size:20px" class="btn-outline-light" type="button" name="button">Withdrawal</button>
-             <button style="width:150px;font-size:20px" class="btn-outline-light" type="button" name="button">Deposit</button>
-         </div>
-     </div>
- </div>
-       <!-- php wallet close -->
-</div>
+       <div id="inr_wallet" class="row margin-0">
+       <div class="col-lg-12 col-md-12 col-sm-12">
+       <div class="row margin-bottom-10">
+       <div class="col-lg-12 col-md-12 col-sm-12 wallets-container card white-background">
+       <div class="row">
+       <div class="col-lg-12 col-md-12 col-sm-12 header">
+       <table>
+       <tbody><tr>
+       <td style="padding-top:9px;padding-left:9px;">
+       <img src="images/moneybag.png" style="width: 45px;margin-right:6px;">
+       </td>
+       <td style="padding-top:20px;padding-left:9px;">
+       <b>INR WALLET</b>
+       </td>
+       </tr>
+       </tbody></table>
+       </div>
+       </div>
+       <div class="row">
+       <div class="col-lg-12">
+       <table class="table">
+       <thead>
+       <tr>
+       <th>TOTAL</th>
+       <th>IN ORDER</th>
+       <th>AVAILABLE</th>
+       <th style="width:212px;"></th>
+       </tr>
+       </thead>
+       <tbody>
+       <tr>
+       <td style="font-size:16px;" class="ng-binding">
+       0.00
+       <span class="inrLabel">INR</span>
+       </td>
+       <td style="font-size:16px;" class="ng-binding">
+       0.00
+       <span class="inrLabel">INR</span>
+       </td>
+       <td style="font-size:16px;" class="ng-binding">
+       0.00
+       <span class="inrLabel">INR</span>
+       </td>
+       <td style="font-size:25px;padding-right:10px;width:250px">
+         <button id="deposit" type="button" class="btn btn-primary bold deposit_button" data-toggle="modal" data-target="#DepositModal" data-max="50000" data-min="10" data-name="Credit Card" data-id="4" style="width:115px; align:center;font-size:13px;float:left">
+        <i class="fa fa-money"></i> DEPOSIT
+        </button>
+        <button id="withdraw" type="button" class="btn btn-success bold deposit_button" data-toggle="modal" data-target="#DepositModal" data-max="50000" data-min="10" data-name="Credit Card" data-id="4" style="width:115px; align:center;font-size:13px;float:right">
+       <i class="fa fa-money"></i> WITHDRAW
+       </button>
+       </td>
+       </tr>
+       </tbody>
+       </table>
+       </div>
+       </div>
+       </div>
+       </div>
+       </div>
+     </div> <br>
+
+<!-- </div> -->
 
         <!-- Add money via Credit Card -->
         <div id="add_money" class="modal fade in" id="DepositModal" tabindex="-1" role="basic" aria-hidden="true" style="display: none; padding-right: 17px;">
@@ -297,46 +335,125 @@
             <div class="modal-content">
               <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
-                <h4 class="modal-title">ADD MONEY VIA <b class="abir_name">Credit Card</b></h4>
+                <!-- <h4 class="modal-title">ADD MONEY VIA <b class="abir_name">Credit Card</b></h4> -->
               </div>
 
               <form method="post" action="">
-
-
                 <div class="modal-body">
-
                   <input class="form-control abir_id" type="hidden" name="id" value="4">
-
                   <div class="row">
                     <div class="form-group">
-                      <label class="col-md-12"><strong style="text-transform: uppercase;">DEPOSIT AMOUNT</strong>
+                      <label style="text-align:center;font-size:20px" class="col-md-12"><strong style="text-transform: uppercase;">ENTER AMOUNT</strong>
       <span class="abir_limits"></span>
       </label>
                       <div class="col-md-12">
                         <div class="input-group mb15">
-                          <input class="form-control input-lg" name="amount" type="text" autocomplete="off">
+                          <input onkeyup="sync()" id="enter_amount" style="text-align:center" class="form-control input-lg" name="amount" type="text" autocomplete="off">
+                          <span class="input-group-addon">INR</span>
+                        </div> <br>
+                      </div>
+
+                      <label style="text-align:center;font-size:20px" class="col-md-12"><strong style="text-transform: uppercase;">NET AMOUNT </strong><i style="font-weight:100;font-size:15px">(*Brokerage applied)</i>
+      <span class="abir_limits"></span>
+      </label>
+                      <div class="col-md-12">
+                        <div class="input-group mb15">
+                          <input onkeyup="sync()" id="net_amount" style="text-align:center" class="form-control input-lg" name="amount" type="text">
                           <span class="input-group-addon">INR</span>
                         </div>
                       </div>
                     </div>
                   </div>
-
                 </div>
-
                 <div class="modal-footer">
-                  <button type="button" class="btn btn-default" data-dismiss="modal" onclick="location.reload()">Close</button>
-                  <button id="add" type="button" class="btn btn-primary">ADD</button>
+                  <button style="font-size:15px" type="button" class="btn btn-default" data-dismiss="modal" onclick="location.reload()">Close</button>
+                  <button style="font-size:15px" id="add" type="button" class="btn btn-primary">SUBMIT</button>
                 </div>
-
               </form>
-
             </div>
           </div>
         </div>
 
-     <iframe id="iframe1" style="display:none;margin-left:200px" src="file:///C:/Users/windows/Desktop/Cash-Equities-master/payment.html" width="500px" height="325px"></iframe>
-        <!-- Add money close -->
 
+
+        <!-- CREDIT CARD FORM STARTS HERE -->
+        <div class="container" id="add_money4" style="margin-left:250px;display:none">
+          <div class="row">
+              <div class="col-xs-12 col-md-4">
+        <div class="panel panel-default credit-card-box">
+            <div class="panel-heading display-table" >
+                <div class="row display-tr" >
+                    <h3 class="panel-title display-td" >Payment Details</h3>
+                    <div class="display-td" >
+                        <img class="img-responsive pull-right" src="http://i76.imgup.net/accepted_c22e0.png">
+                    </div>
+                </div>
+            </div>
+            <div class="panel-body">
+                <form role="form" id="payment-form" method="POST" action="javascript:void(0);">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <div class="form-group">
+                                <label for="cardNumber">CARD NUMBER</label>
+                                <div class="input-group">
+                                    <input
+                                        type="tel"
+                                        class="form-control"
+                                        name="cardNumber"
+                                        placeholder="Valid Card Number"
+                                        autocomplete="cc-number"
+                                        required autofocus
+                                    />
+                                    <span class="input-group-addon"><i class="fa fa-credit-card"></i></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-7 col-md-7">
+                            <div class="form-group">
+                                <label for="cardExpiry"><span class="hidden-xs">EXPIRATION</span><span class="visible-xs-inline"></span> DATE</label>
+                                <input
+                                    type="tel"
+                                    class="form-control"
+                                    name="cardExpiry"
+                                    placeholder="MM / YY"
+                                    autocomplete="cc-exp"
+                                    required
+                                />
+                            </div>
+                        </div>
+                        <div class="col-xs-5 col-md-5 pull-right">
+                            <div class="form-group">
+                                <label for="cardCVC">CVV CODE</label>
+                                <input
+                                    type="tel"
+                                    class="form-control"
+                                    name="cardCVC"
+                                    placeholder="CVV"
+                                    autocomplete="cc-csc"
+                                    required
+                                />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <button id="submit1" style="padding:5px 5px" class="subscribe btn btn-success btn-lg btn-block" type="button">SUBMIT</button>
+                        </div>
+                    </div>
+                    <div class="row" style="display:none;">
+                        <div class="col-xs-12">
+                            <p class="payment-errors"></p>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+    <!-- Credit card ends here -->
 
       </section>
     </section>
@@ -356,6 +473,10 @@
     <script src="js/highcharts.js"></script>
     <script src="js/exporting.js"></script>
     <script src="js/plugins/dataTables.colVis.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.13.1/jquery.validate.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.payment/1.2.3/jquery.payment.min.js"></script>
+    <script type="text/javascript" src="https://js.stripe.com/v2/"></script>
+    <script type="text/javascript" src="js/payment.js"></script>
     <!--[if lt IE 8]><script src="js/excanvas.min.js"></script><![endif]-->
     <script src="js/tradify.js"></script>
     <script>

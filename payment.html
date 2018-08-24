@@ -15,16 +15,24 @@
     <script type="text/javascript" src="js/payment.js"></script>
 
   </head>
+  <script>
+    $(document).ready(function() {
+      $("#submit1").click(function() {
+         $("#success").fadeIn(10, function() {
+         });
+    });
+  });
+  </script>
 
-<body >
+<body>
 
-  <div class="container">
+  <div class="container" id="add_money4">
     <div class="row">
         <div class="col-xs-12 col-md-4">
 
 
             <!-- CREDIT CARD FORM STARTS HERE -->
-            <div id="add_money" class="panel panel-default credit-card-box">
+            <div class="panel panel-default credit-card-box">
                 <div class="panel-heading display-table" >
                     <div class="row display-tr" >
                         <h3 class="panel-title display-td" >Payment Details</h3>
@@ -83,7 +91,7 @@
                         </div>
                         <div class="row">
                             <div class="col-xs-12">
-                                <button style="padding:5px 5px" class="subscribe btn btn-success btn-lg btn-block" type="button">SUBMIT</button>
+                                <button id="submit1" onclick="location.href='wallet.html'" style="padding:5px 5px" class="subscribe btn btn-success btn-lg btn-block" type="button">SUBMIT</button>
                             </div>
                         </div>
                         <div class="row" style="display:none;">
@@ -98,5 +106,16 @@
         </div>
       </div>
         <!-- Credit card ends here -->
+
+        <!-- Success message -->
+     <div class="container" style="display:none">
+        <div id="success" class="alert alert-success alert-dismissible fade in">
+          <a href="wallet.html" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+          <strong>Success!</strong> Happy Trading.
+        </div>
+    </div>
+        <!-- Success message close-->
+
     </body>
+
 </html>
