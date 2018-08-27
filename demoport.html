@@ -1,0 +1,78 @@
+<div class="row margin-left-right-0">
+  <div class="col-lg-12 col-md-12 col-sm-12 margin-bottom-10">
+    <div class="row wallets-container white-background card">
+      <div class="col-lg-6 col-md-6 col-sm-6 header">
+        <table>
+          <tbody>
+            <tr>
+              <td>
+                <img src="images/moneybag.png" style="width: 80px;padding: 12px;">
+              </td>
+              <td>
+                <b>DBS WALLET</b>
+                <br>
+                <span>PORTFOLIO VALUE :</span>
+                <span ng-class="{'highIndicator_without_background':vm.portfolio.portfolio_flag == 1,'lowIndicator_without_background':vm.portfolio.portfolio_flag != 1}" style="font-size:16px;" class="ng-binding lowIndicator_without_background">
+                <span class="inrLabel">INR</span> 0.00
+                <!-- ngIf: vm.portfolio.portfolio_flag == 1 -->
+                <!-- ngIf: vm.portfolio.portfolio_flag == -1 -->
+                </span>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="col-md-6">
+        <table class="float-right">
+          <tbody>
+
+
+          </tbody>
+        </table>
+      </div>
+      <div class="col-lg-12">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>
+                <span ng-click="vm.sortmethod('currency_type')" style="cursor:pointer">
+                    CRYPTOCURRENCY&nbsp;
+                </span>
+              </th>
+              <th>
+                <span ng-click="vm.sortmethod('total_amount')" style="cursor:pointer">
+                       TOTAL&nbsp;
+                </span>
+              </th>
+              <th>
+                <span ng-click="vm.sortmethod('reserved_amount')" style="cursor:pointer">
+                     IN ORDERS&nbsp;
+                </span>
+              </th>
+              <th>
+                <span ng-click="vm.sortmethod('escrow_amount')" style="cursor:pointer">
+                       ESCROW&nbsp;
+                </span>
+              </th>
+              <th>
+                <span ng-click="vm.sortmethod('collateral_amount')" style="cursor:pointer">
+                       COLLATERAL&nbsp;
+                </span>
+              </th>
+              <th>
+                <span ng-click="vm.sortmethod('amount')" style="cursor:pointer">
+                      AVAILABLE&nbsp;
+                </span>
+              </th>
+              <th class="center">TRANSACT</th>
+            </tr>
+          </thead>
+          <tbody>
+
+
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

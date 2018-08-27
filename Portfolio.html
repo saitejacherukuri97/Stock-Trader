@@ -109,7 +109,7 @@
         </ul>
         <ul class="nav navbar-nav navbar-right mt0">
           <li class="dropdown dropdown-list">
-            <a href="" onclick="location.href='wallet.html'" data-toggle="dropdown" data-play="fadeIn" class="dropdown-toggle">
+            <a href="wallet.html" data-toggle="dropdown" data-play="fadeIn" class="dropdown-toggle">
                      <strong><i class="fa fa-inr"></i> Wallet</strong>
                      </a>
           </li>
@@ -269,291 +269,150 @@
     <section style="padding-top:30px">
       <section id="whole_page" class="main-content">
 
-        <!-- Success message -->
-      <div id="success" class="container" style="display:none;width:50%;margin-bottom:20px">
-        <div  class="alert alert-success alert-dismissible fade in">
-          <a href="wallet.html" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-          <strong>Deposit Success!</strong> Happy Trading.
-        </div>
-      </div>
-        <!-- Success message close-->
-
-        <!-- Success1 message -->
-      <div id="success1" class="container" style="display:none;width:50%;margin-bottom:20px">
-        <div  class="alert alert-success alert-dismissible fade in">
-          <a href="wallet.html" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-          <strong>Withdrawal Success!</strong> Happy Trading.
-        </div>
-      </div>
-        <!-- Success1 message close-->
-
-       <div id="inr_wallet" class="row margin-0">
-       <div class="col-lg-12 col-md-12 col-sm-12">
-       <div class="row margin-bottom-10">
-       <div class="col-lg-12 col-md-12 col-sm-12 wallets-container card white-background">
-       <div class="row">
-       <div class="col-lg-12 col-md-12 col-sm-12 header">
-       <table>
-       <tbody><tr>
-       <td style="padding-top:9px;padding-left:9px;">
-       <img src="images/moneybag.png" style="width: 45px;margin-right:6px;">
-       </td>
-       <td style="padding-top:20px;padding-left:9px;">
-       <b>DBS WALLET</b>
-       </td>
-       </tr>
-       </tbody></table>
-       </div>
-       </div>
-       <div class="row">
-       <div class="col-lg-12">
-       <table class="table">
-       <thead>
-       <tr>
-       <th>TOTAL</th>
-       <th>IN ORDER</th>
-       <th>AVAILABLE</th>
-       <th style="width:212px;"></th>
-       </tr>
-       </thead>
-       <tbody>
-       <tr>
-       <td style="font-size:16px;" class="ng-binding">
-       0.00
-       <span class="inrLabel">INR</span>
-       </td>
-       <td style="font-size:16px;" class="ng-binding">
-       0.00
-       <span class="inrLabel">INR</span>
-       </td>
-       <td style="font-size:16px;" class="ng-binding">
-       0.00
-       <span class="inrLabel">INR</span>
-       </td>
-       <td style="font-size:25px;padding-right:10px;width:250px">
-         <button id="deposit" type="button" class="btn btn-primary bold deposit_button" data-toggle="modal" data-target="#DepositModal" data-max="50000" data-min="10" data-name="Credit Card" data-id="4" style="width:115px; align:center;font-size:13px;float:left">
-        <i class="fa fa-money"></i> DEPOSIT
-        </button>
-        <button id="withdraw" type="button" class="btn btn-success bold deposit_button" data-toggle="modal" data-target="#DepositModal" data-max="50000" data-min="10" data-name="Credit Card" data-id="4" style="width:115px; align:center;font-size:13px;float:right">
-       <i class="fa fa-money"></i> WITHDRAW
-       </button>
-       </td>
-       </tr>
-       </tbody>
-       </table>
-       </div>
-       </div>
-       </div>
-       </div>
-     </div>
-     </div> <br>
-
-
-   <!-- Wallet-history-->
-   <div id="wallet_history" class="row margin-bottom-10">
-   <div class="col-lg-12 col-md-12 col-sm-12 wallets-container card white-background">
-   <div class="row">
-   <div class="col-lg-12 col-md-12 col-sm-12 header">
-
-     <table>
-     <tbody><tr>
-     <td>
-     <div class="circularIcons">
-     <i class="fa fa-history"></i>
-     </div>
-     </td>
-     <td>
-     <b>Wallet Transaction History</b>
-     </td>
-     </tr>
-     </tbody></table>
-
-     <div class="table-responsive">
-       <table class="table table-bordered table-hover">
-         <thead>
-           <tr>
-             <th>Date</th>
-             <th>Deposit/Withdraw</th>
-             <th>Amount</th>
-           </tr>
-         </thead>
-         <tbody>
-           <tr>
-             <td>
-               02/18/2018 06:02:45 PM
-             </td>
-             <td style="color:#00b300">Deposit</td>
-             <td>0.00000276</td>
-           </tr>
-           <tr>
-             <td>
-               02/18/2018 06:02:45 PM
-             </td>
-             <td style="color:#cc0000">Withdraw</td>
-             <td>0.00000276</td>
-           </tr>
-           <tr>
-             <td>
-               02/18/2018 06:02:45 PM
-             </td>
-             <td style="color:#cc0000">Withdraw</td>
-             <td>0.00000276</td>
-           </tr>
-           <tr>
-             <td>
-               02/18/2018 06:02:45 PM
-             </td>
-             <td style="color:#cc0000">Withdraw</td>
-             <td>0.00000276</td>
-           </tr>
-           <tr>
-             <td>
-               02/18/2018 06:02:45 PM
-             </td>
-             <td style="color:#cc0000">Withdraw</td>
-             <td>0.00000276</td>
-           </tr>
-           <tr>
-             <td>
-               02/18/2018 06:02:45 PM
-             </td>
-             <td style="color:#00b300">Deposit</td>
-             <td>0.00000276</td>
-           </tr>
-         </tbody>
-       </table>
-     </div>
-     </div>
-     </div>
-   </div>
- </div>
-   <!-- wallet history-->
-
-        <!-- Add money via Credit Card -->
-        <div id="add_money" class="modal fade in" id="DepositModal" tabindex="-1" role="basic" aria-hidden="true" style="display: none; padding-right: 17px;">
-          <div class="modal-dialog"> <br> <br> <br> <br> <br>
-            <div class="modal-content">
-              <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
-                <!-- <h4 class="modal-title">ADD MONEY VIA <b class="abir_name">Credit Card</b></h4> -->
+        <div class="row margin-left-right-0">
+          <div class="col-lg-12 col-md-12 col-sm-12 margin-bottom-10">
+            <div class="row wallets-container white-background card">
+              <div class="col-lg-6 col-md-6 col-sm-6 header">
+                <table>
+                  <tbody>
+                    <tr>
+                      <td>
+                        <img src="images/moneybag.png" style="width: 80px;padding: 12px;">
+                      </td>
+                      <td>
+                        <b style="font-size:15px;color:black">DBS WALLET</b>
+                        <br>
+                        <span>PORTFOLIO VALUE :</span>
+                        <span ng-class="{'highIndicator_without_background':vm.portfolio.portfolio_flag == 1,'lowIndicator_without_background':vm.portfolio.portfolio_flag != 1}" style="font-size:16px;" class="ng-binding lowIndicator_without_background">
+                        <span class="inrLabel">INR</span> 0.00
+                        <!-- ngIf: vm.portfolio.portfolio_flag == 1 -->
+                        <!-- ngIf: vm.portfolio.portfolio_flag == -1 -->
+                        </span>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
               </div>
+              <div class="col-md-6">
+                <table class="float-right">
+                  <tbody>
 
-              <form method="post" action="">
-                <div class="modal-body">
-                  <input class="form-control abir_id" type="hidden" name="id" value="4">
-                  <div class="row">
-                    <div class="form-group">
-                      <label style="text-align:center;font-size:20px" class="col-md-12"><strong style="text-transform: uppercase;">ENTER AMOUNT</strong>
-      <span class="abir_limits"></span>
-      </label>
-                      <div class="col-md-12">
-                        <div class="input-group mb15">
-                          <input onkeyup="sync()" id="enter_amount" style="text-align:center" class="form-control input-lg" name="amount" type="text" autocomplete="off">
-                          <span class="input-group-addon">INR</span>
-                        </div> <br>
-                      </div>
+                  </tbody>
+                </table>
+              </div>
+              <div class="col-lg-12">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th>
+                        <span ng-click="vm.sortmethod('currency_type')" style="cursor:pointer;color:black;margin-right:10px">
+                            COMPANY&nbsp;
+                        </span>
+                      </th>
+                      <th>
+                        <span ng-click="vm.sortmethod('total_amount')" style="cursor:pointer;color:black;margin-right:60px">
+                               TOTAL&nbsp;
+                        </span>
+                      </th>
+                      <th>
+                        <span ng-click="vm.sortmethod('reserved_amount')" style="cursor:pointer;color:black;margin-right:40px">
+                             IN ORDERS&nbsp;
+                        </span>
+                      </th>
+                      <th>
+                        <span ng-click="vm.sortmethod('amount')" style="cursor:pointer;color:black">
+                              AVAILABLE&nbsp;
+                        </span>
+                      </th>
+                      <!-- <th class="center" style="color:black">TRANSACT</th> -->
+                    </tr>
+                  </thead>
+                  <tbody>
+                  <tr>
+                    <td>
+<span class="coin-image" style="margin-right:20px">
+<img src="images/Airtel.png" height="45px" width="90px">
+</span>
+</td>
+<td>
+<div style="font-size:16px;" class="ng-binding">
+0 INR
+</div>
+</td>
+<td>
+<div style="font-size:16px;" class="ng-binding">
+0 INR
+</div>
+</td>
+<td>
+<div style="font-size:16px;margin-right:20px" class="ng-binding">
+0 INR
+</div>
+</td>
+<td>
+<div class="col-md-6 text-align-center customtooltip">
+<a class="link newtooltip" style="position:relative;width:80px;text-align-left;" href="wallet_deposits/true_usd">
+<span class="fa tooltipinput buyColor fa-check-circle-o"></span>
 
-                      <label style="text-align:center;font-size:20px" class="col-md-12"><strong style="text-transform: uppercase;">NET AMOUNT </strong><i style="font-weight:100;font-size:15px">(*Brokerage applied)</i>
-      <span class="abir_limits"></span>
-      </label>
-                      <div class="col-md-12">
-                        <div class="input-group mb15">
-                          <input onkeyup="sync()" id="net_amount" style="text-align:center" class="form-control input-lg" name="amount" type="text">
-                          <span class="input-group-addon">INR</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="modal-footer">
-                  <button style="font-size:15px" type="button" class="btn btn-default" data-dismiss="modal" onclick="location.reload()">Close</button>
-                  <button style="font-size:15px" id="add" type="button" class="btn btn-primary">SUBMIT</button>
-                </div>
-              </form>
+<b>BUY</b>
+</a>
+</div>
+<div class="col-md-6 text-align-center customtooltip">
+<a class="link newtooltip" style="position:relative;width:110px;text-align-left;" href="wallet_withdrawals/true_usd">
+<span class="fa tooltipinput buyColor fa-check-circle-o"></span>
+
+<b ng-class="{'secondSellColor':wallet.withdrawal_freezed}">SELL</b>
+</a>
+</div>
+</td>
+</tr>
+
+<tr>
+  <td>
+ <span class="coin-image" style="margin-right:20px">
+ <img src="images/titan.png" height="50px" width="90px">
+ </span>
+ </td>
+ <td>
+ <div style="font-size:16px;" class="ng-binding">
+ 0 INR
+ </div>
+ </td>
+ <td>
+ <div style="font-size:16px;" class="ng-binding">
+ 0 INR
+ </div>
+ </td>
+ <td>
+ <div style="font-size:16px;margin-right:20px" class="ng-binding">
+ 0 INR
+ </div>
+ </td>
+ <td>
+ <div class="col-md-6 text-align-center customtooltip">
+ <a class="link newtooltip" style="position:relative;width:80px;text-align-left;" href="wallet_deposits/true_usd">
+ <span class="fa tooltipinput buyColor fa-check-circle-o"></span>
+
+ <b>BUY</b>
+ </a>
+ </div>
+ <div class="col-md-6 text-align-center customtooltip">
+ <a class="link newtooltip" style="position:relative;width:110px;text-align-left;" href="wallet_withdrawals/true_usd">
+ <span class="fa tooltipinput buyColor fa-check-circle-o"></span>
+
+ <b ng-class="{'secondSellColor':wallet.withdrawal_freezed}">SELL</b>
+ </a>
+ </div>
+ </td>
+</tr>
+
+                  </tbody>
+                </table>
+              </div>
             </div>
           </div>
         </div>
 
-
-
-        <!-- CREDIT CARD FORM STARTS HERE -->
-        <div class="container" id="add_money4" style="margin-left:250px;display:none">
-          <div class="row">
-              <div class="col-xs-12 col-md-4">
-        <div class="panel panel-default credit-card-box">
-            <div class="panel-heading display-table" >
-                <div class="row display-tr" >
-                    <h3 class="panel-title display-td" >Payment Details</h3>
-                    <div class="display-td" >
-                        <img class="img-responsive pull-right" src="http://i76.imgup.net/accepted_c22e0.png">
-                    </div>
-                </div>
-            </div>
-            <div class="panel-body">
-                <form role="form" id="payment-form" method="POST" action="javascript:void(0);">
-                    <div class="row">
-                        <div class="col-xs-12">
-                            <div class="form-group">
-                                <label for="cardNumber">CARD NUMBER</label>
-                                <div class="input-group">
-                                    <input
-                                        type="tel"
-                                        class="form-control"
-                                        name="cardNumber"
-                                        placeholder="Valid Card Number"
-                                        autocomplete="cc-number"
-                                        required autofocus
-                                    />
-                                    <span class="input-group-addon"><i class="fa fa-credit-card"></i></span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-xs-7 col-md-7">
-                            <div class="form-group">
-                                <label for="cardExpiry"><span class="hidden-xs">EXPIRATION</span><span class="visible-xs-inline"></span> DATE</label>
-                                <input
-                                    type="tel"
-                                    class="form-control"
-                                    name="cardExpiry"
-                                    placeholder="MM / YY"
-                                    autocomplete="cc-exp"
-                                    required
-                                />
-                            </div>
-                        </div>
-                        <div class="col-xs-5 col-md-5 pull-right">
-                            <div class="form-group">
-                                <label for="cardCVC">CVV CODE</label>
-                                <input
-                                    type="tel"
-                                    class="form-control"
-                                    name="cardCVC"
-                                    placeholder="CVV"
-                                    autocomplete="cc-csc"
-                                    required
-                                />
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-xs-12">
-                            <button id="submit1" style="padding:5px 5px" class="subscribe btn btn-success btn-lg btn-block" type="button">SUBMIT</button>
-                        </div>
-                    </div>
-                    <div class="row" style="display:none;">
-                        <div class="col-xs-12">
-                            <p class="payment-errors"></p>
-                        </div>
-                    </div>
-                </form>
-            </div>
-        </div>
-      </div>
-    </div>
-  </div>
-    <!-- Credit card ends here -->
 
       </section>
     </section>
