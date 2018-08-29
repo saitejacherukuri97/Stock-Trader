@@ -1,37 +1,34 @@
-<!DOCTYPE html>
+ 
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html lang="en">
 
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
-  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
-
   <title>DBS Stock Trader</title>
   <link rel="stylesheet" href="css/bootstrap.css">
-  <link rel="stylesheet" href="css/plugins/animate%2banimo.css">
-  <link rel="stylesheet" href="css/plugins/csspinner.min.css">
+  <link rel="stylesheet" href="css/font-awesome.css">
+  <link rel="stylesheet" href="plugins/animate%2banimo.css">
+  <link rel="stylesheet" href="plugins/csspinner.min.css">
   <link rel="stylesheet" href="css/app.css">
   <link rel="stylesheet" href="css/phpwallet1.css">
   <script src="js/modernizr.js"></script>
   <script src="js/fastclick.js"></script>
-  <link rel="stylesheet" href="css/tab.css">
-  <!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> -->
-  <script src="js/chart.js"></script>
-
+<link rel="stylesheet" src="css/table.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-   <style>
-/* table {font: 30px;}    */
-.table5 td{ padding:5px;}
-.table5 td.hed{ background:#E8EBEF; font:bold 12px arial;}
-.table5 td.det{ font:12px arial; }
-   </style>
-
 
 </head>
 
 <body>
+  <div id="overlayLoader">
+    <div id="preloader">
+      <span></span>/
+      <span></span>
+    </div>
+  </div>
+
+
   <section class="wrapper">
     <nav class="navbar navbar-default navbar-top navbar-fixed-top">
       <div class="navbar-header">
@@ -151,7 +148,7 @@
                 <img src="02.jpg" alt="Avatar" width="60" height="60" class="img-thumbnail img-circle account-img-mb">
               </div>
               <div class="user-block-info">
-                <span class="user-block-name item-text">James Franky</span>
+                <span class="user-block-name item-text">${username}</span>
                 <span class="user-block-role"><i class="fa fa-check text-green"></i> Verified</span>
                 <div class="label label-primary"><i class="fa fa-chevron-down"></i> Account Info</div>
               </div>
@@ -208,202 +205,111 @@
       </nav>
     </aside>
 
+	<style>
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+	font-size:25 px;
+	
+}
+
+tr:hover {background-color:#e6e6e6;}
+
+
+label {
+color: #B4886B;
+font-weight: bold;
+
+width: 150px;
+
+font-size:20px;
+}
+
+</style>
 
 
     <section>
 
+
       <!--Scroll ticker -->
 
-      <iframe allowtransparency="true" id="macroaxis_stock_ticker" name="macroaxis_stock_ticker" marginheight="0" marginwidth="0" scrolling="NO" height="31px" width="100%" frameborder="0" src="ticker.html"></iframe>
-
+      <iframe allowtransparency="true" id="macroaxis_stock_ticker" name="macroaxis_stock_ticker" marginheight="0" marginwidth="0" scrolling="NO" height="31px" width="100%" frameborder="0" src="ticker.jsp"></iframe>
+       <!--<jsp:include page="/ticker" />-->
       <!-- ticker close-->
-      <br><br>
+	  
+	   <section>
+	   <div> 
+	   <pre>  <label>ACOOUNT STATUS:- </label>    <label> Active</label>                                                   <label>Account Credited on (date & time)</label></pre>
+	   </div>
+	   
+	   
+<div >
+  <div >
+   <center> <font size="5px"> PERSONAL INFORMATION </font></center>
+  <table>
+  <tr>
+    <th>NAME:</th>
+    <td>1234567898</td>
+   
+  </tr>
+  <tr>
+    <th>E_MAIL ID</th>
+    <td>fgt446</td>
+   
+  </tr>
+  <tr>
+    <th>STOCK TRADER ID</th>
+    <td>88555</td>
+    
+  </tr>
+  
 
-      <section class="main-content">
-             <button type="button" class="btn btn-labeled btn-primary pull-right" >
-                       <span class="btn-label"><i class="fa fa-bullhorn"></i>
-                       </span>Available Stocks: 200</button>
-
-         <div class="row">
-           <div class="col-md-9">
-
-            <!-- table start -->
-                       <div class="tab">
-                 <button class="tablinks" onclick="openCity(event, 'London')" id="defaultOpen">About</button>
-                 <button class="tablinks" onclick="openCity(event, 'Paris')">Graph</button>
-                 <button class="tablinks" onclick="openCity(event, 'Tokyo')">Order book</button>
-               </div>
-
-               <div id="London" class="tabcontent">
-                 <h3>Name: Titan</h3>
-                 <h3>Website: http://www.titan.co.in</h3> <br>
-                 Market Cap: 79,279 Crores
-               </div>
-
-               <div id="Paris" class="tabcontent" style="width:100%">
-                 <div id="chartContainer"></div>
-               </div>
-
-               <div id="Tokyo" class="tabcontent">
-
-       <table width="100%" cellspacing="0" cellpadding="0" border="0" class="table5">
-            <tbody><tr>
-              <td class="hed">Open</td>
-              <td class="hed">888.00</td>
-              <td class="hed">Vol</td>
-              <td class="hed">941025</td>
-            </tr>
-            <tr>
-              <td class="det"><strong>High</strong></td>
-              <td class="det">895.60</td>
-              <td class="det"><strong> 52 Week</strong></td>
-              <td class="det">999.70 </td>
-            </tr>
-            <tr>
-              <td class="det"><strong>Low</strong></td>
-              <td class="det">876.50</td>
-              <td class="det"><strong> 52 Week </strong></td>
-              <td class="det">563.65 </td>
-            </tr>
-            <tr>
-              <td class="det"><strong>Prev. Close </strong></td>
-              <td class="det">888.30</td>
-              <td class="det">&nbsp;</td>
-              <td class="det">&nbsp;</td>
-            </tr>
-          </tbody></table>
-
-               </div>
-
-               <!-- table close>  -->
-       </div>
-
-   <!-- Top 5 companies -->
-   <div class="col-md-3">
-        <div class="panel panel-default">
-           <div class="panel-heading">
-              <div class="panel-title">Stock Status</div>
-           </div>
-           <div class="list-group">
-              <div class="list-group-item">
-                 <div class="media">
-                    <div class="pull-left">
-                       <span class="fa-stack fa-lg">
-                       <em class="fa fa-circle fa-stack-2x text-warning"></em>
-                       <em class="fa fa-money fa-stack-1x fa-inverse text-white"></em>
-                       </span>
-                    </div>
-                    <div class="media-body clearfix">
-                       <strong>Closing Price</strong>
-                       <p class="m0">
-                          <small class="text-green">$0.02 <i class="fa fa-money"></i></small>
-                       </p>
-                       <p><i class="fa fa-inr"></i> 0.00</p>
-                    </div>
-                 </div>
-              </div>
-              <div class="list-group-item">
-                 <div class="media">
-                    <div class="pull-left">
-                       <span class="fa-stack fa-lg">
-                       <em class="fa fa-circle fa-stack-2x text-blue"></em>
-                       <em class="fa fa-history fa-stack-1x fa-inverse text-white"></em>
-                       </span>
-                    </div>
-                    <div class="media-body clearfix">
-                       <strong>24Hr Change</strong>
-                       <p class="m0">
-                         <small class="text-green">$0.02 <i class="fa fa-money"></i></small>
-                       </p>
-                       <p><i class="fa fa-inr"></i> $0.02</p>
-                    </div>
-                 </div>
-              </div>
-              <div class="list-group-item">
-                 <div class="media">
-                    <div class="pull-left">
-                       <span class="fa-stack fa-lg">
-                       <em class="fa fa-circle fa-stack-2x text-danger"></em>
-                       <em class="fa fa-level-down fa-stack-1x fa-inverse text-white"></em>
-                       </span>
-                    </div>
-                    <div class="media-body clearfix">
-                       <strong>24Hr Low</strong>
-                       <p class="m0">
-                         <small class="text-green">$0.02 <i class="fa fa-money"></i></small>
-                       </p>
-                       <p><i class="fa fa-inr"></i> 0.00 <i class="fa fa-level-down text-danger"></i></p>
-                    </div>
-                 </div>
-              </div>
-              <div class="list-group-item">
-                 <div class="media">
-                    <div class="pull-left">
-                       <span class="fa-stack fa-lg">
-                       <em class="fa fa-circle fa-stack-2x text-green"></em>
-                       <em class="fa fa-level-up fa-stack-1x fa-inverse text-white"></em>
-                       </span>
-                    </div>
-                    <div class="media-body clearfix">
-                       <strong>24Hr High</strong>
-                       <p class="m0">
-                         <small class="text-green">$0.02 <i class="fa fa-money"></i></small>
-                       </p>
-                       <p><i class="fa fa-inr"></i> 0.00 <i class="fa fa-level-up text-green"></i></p>
-                    </div>
-                 </div>
-              </div>
-           </div>
-        </div>
-                    <!-- Coin Status Ends Here -->
-                    <div class="panel panel-default">
-                       <div class="panel-heading">
-                          <div class="pull-right"><i class="fa fa-bullhorn"></i></div>
-                          <div class="panel-title">Upcoming News</div>
-                       </div>
-                       <div class="list-group">
-                          <a href="javascript:void(0);" class="list-group-item">
-                             <div class="media">
-                                <div class="media-body">
-                                   <small class="pull-right">2h</small>
-                                   <strong class="media-heading text-primary">Titan Ltd</strong>
-                                   <p><small>Posted by Times of India</small></p>
-                                   <p class="mb-sm">
-                                      <small>We are introducing new customizable designs for customers</small>
-                                   </p>
-                                </div>
-                             </div>
-                          </a>
-                          <a href="javascript:void(0);" class="list-group-item">
-                             <div class="media">
-                                <div class="media-body">
-                                   <small class="pull-right">2h</small>
-                                   <strong class="media-heading text-primary">Bharti Airtel</strong>
-                                   <p><small>Posted by Hindu</small></p>
-                                   <p class="mb-sm">
-                                      <small>Exciting offers for prepaid and postpaid customers</small>
-                                   </p>
-                                </div>
-                             </div>
-                          </a>
-                       </div>
-                       <div class="panel-footer clearfix">
-                          <a href="javascript:void(0);" class="pull-left">
-                          <small>Read All</small>
-                          </a>
-                       </div>
-                    </div>
-                 </div>
-   <!-- top 5 companies close-->
-      </div>
+ 
+  
+</table>
 
 
+  </div>
 
+  <div  >
+   <center> <font size="5px"> KYC DETAILS </font></center>
+<table>
+  <tr>
+    <th>AADHAR NUMBER:</th>
+    <td>1234567898</td>
+   
+  </tr>
+  <tr>
+    <th>PAN NUMBER</th>
+    <td>fgt446</td>
+   
+  </tr>
+  <tr>
+    <th>DOB:</th>
+    <td>88/00/99</td>
+    
+  </tr>
+  
 
+  <tr>
+    <th>FULL NAME:</th>
+    <td>dbsdbs</td>
+    
+  </tr>
+  
+</table>
 
-      </section>
-    </section>
-  </section>
+  </div>
+</div>
+
+</section>
+  
   <script src="js/plugins/jquery.js"></script>
   <script src="js/plugins/velocity.js"></script>
   <script src="js/plugins/velocity.ui.js"></script>
@@ -420,8 +326,6 @@
   <script src="js/highcharts.js"></script>
   <script src="js/exporting.js"></script>
   <script src="js/plugins/dataTables.colVis.js"></script>
-  <script src="js/tab.js"></script>
-  <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
 
   <!--[if lt IE 8]><script src="js/excanvas.min.js"></script><![endif]-->
   <script src="js/tradify.js"></script>
@@ -429,17 +333,12 @@
     $(document).ready(function() {
       // Candlestick
       $.getJSON('tradify/data.json', function(data) {
-
         // create the chart
         Highcharts.stockChart('candlestickChart', {
-
           chart: {},
-
-
           rangeSelector: {
             selected: 1
           },
-
           series: [{
             type: 'candlestick',
             name: 'SC-BTC',
@@ -459,6 +358,17 @@
         });
       });
     });
+    
+    var auto_refresh = setInterval(
+    	    function()
+    	    {
+    			$('#macroaxis_stock_ticker').fadeIn("slow");
+    			$('#securitytable').load("http://localhost:8080/Cash-Equities-Master/markettable").fadeIn("slow");
+    	    }, 5000);
+    
+    
+    
+    
   </script>
 </body>
 
