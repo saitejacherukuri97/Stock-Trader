@@ -16,16 +16,14 @@
   <script src="js/modernizr.js"></script>
   <script src="js/fastclick.js"></script>
   <link rel="stylesheet" href="css/tab.css">
-  <!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> -->
   <script src="js/chart.js"></script>
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
    <style>
-/* table {font: 30px;}    */
 .table5 td{ padding:5px;}
-.table5 td.hed{ background:#E8EBEF; font:bold 12px arial;}
-.table5 td.det{ font:12px arial; }
+.table5 td.hed{ background:#E8EBEF; font:19px arial;}
+.table5 td.det{ font:19px arial; }
    </style>
 
 
@@ -220,63 +218,202 @@
       <br><br>
 
       <section class="main-content">
-             <button type="button" class="btn btn-labeled btn-primary pull-right" >
+             <button style="font-size:15px" type="button" class="btn btn-labeled btn-info pull-right" >
                        <span class="btn-label"><i class="fa fa-bullhorn"></i>
-                       </span>Available Stocks: 200</button>
+                       </span>Available Stocks: 20000</button>
+<!-- saasaas -->
+<div class="row">
+<div class="col-md-9">
+<div class="row margin-0">
+<!-- <div class="col-lg-12"> -->
+<div class="row margin-bottom-10" style="margin-right:-5px;margin-left:-5px">
+<div class="wallets-container card white-background">
+<!-- <div class="row"> -->
+<!-- <div class="col-lg-12 col-md-12 col-sm-12 header"> -->
+<table>
+<tbody>
+<tr>
+<td>
+  <div class="tab" style="width:100%">
+<button class="tablinks" onclick="openCity(event, 'London')" id="defaultOpen">About</button>
+<button class="tablinks" onclick="openCity(event, 'Paris')">Graph</button>
+<button class="tablinks" onclick="openCity(event, 'Tokyo')">Order book</button>
+<div style="float:right">
+<button class="tablinks" onclick="openCity(event, 'buy')">Buy / Sell</button>
+</div>
+</div>
+</td>
+</tr>
+</tbody></table>
+<!-- </div> -->
+<!-- </div> -->
+<div class="row">
+  <div class="col-md-12">
 
-         <div class="row">
-           <div class="col-md-9">
+   <!-- table start -->
 
-            <!-- table start -->
-                       <div class="tab">
-                 <button class="tablinks" onclick="openCity(event, 'London')" id="defaultOpen">About</button>
-                 <button class="tablinks" onclick="openCity(event, 'Paris')">Graph</button>
-                 <button class="tablinks" onclick="openCity(event, 'Tokyo')">Order book</button>
-               </div>
 
-               <div id="London" class="tabcontent">
-                 <h3>Name: Titan</h3>
-                 <h3>Website: http://www.titan.co.in</h3> <br>
-                 Market Cap: 79,279 Crores
-               </div>
+      <div id="London" class="tabcontent">
+        <h3 style="padding:15px"><strong style="color:black">Name:</strong> Titan Ltd         <i style="float:right"><strong style="color:black">Website:</strong> <a href="https://www.titan.co.in" target="_blank">https://www.titan.co.in</a></i></h3> <br>
+        <b style="font-size:18px;margin-left:13px"><strong style="color:black">Market Cap:</strong> 79,279 Crores</b> <b style="float:right;font-size:18px;margin-right:80px"><strong style="color:black">Current Stock price:</strong> INR 882.05</b> <br> <br>
+      </div>
 
-               <div id="Paris" class="tabcontent" style="width:100%">
-                 <div id="chartContainer"></div>
-               </div>
+      <div id="Paris" class="tabcontent">
+        <div id="chartContainer"></div>
+      </div>
 
-               <div id="Tokyo" class="tabcontent">
+      <div id="Tokyo" class="tabcontent">
 
-       <table width="100%" cellspacing="0" cellpadding="0" border="0" class="table5">
-            <tbody><tr>
-              <td class="hed">Open</td>
-              <td class="hed">888.00</td>
-              <td class="hed">Vol</td>
-              <td class="hed">941025</td>
-            </tr>
-            <tr>
-              <td class="det"><strong>High</strong></td>
-              <td class="det">895.60</td>
-              <td class="det"><strong> 52 Week</strong></td>
-              <td class="det">999.70 </td>
-            </tr>
-            <tr>
-              <td class="det"><strong>Low</strong></td>
-              <td class="det">876.50</td>
-              <td class="det"><strong> 52 Week </strong></td>
-              <td class="det">563.65 </td>
-            </tr>
-            <tr>
-              <td class="det"><strong>Prev. Close </strong></td>
-              <td class="det">888.30</td>
-              <td class="det">&nbsp;</td>
-              <td class="det">&nbsp;</td>
-            </tr>
-          </tbody></table>
+<table width="100%" cellspacing="0" cellpadding="0" border="0" class="table5" background="white"> <br>
+<thead>
+  <tr>
+    <th colspan="2" scope="colgroup" style="text-align:center;font-size:33px;color:black;width:353px">Buy Orders</th>
+    <th colspan="2" scope="colgroup" style="text-align:center;font-size:33px;color:black;width:353px">Sell Orders</th>
+  </tr>
+</thead>
+   <tbody><tr>
+     <td class="hed" style="color:#cc3300"><strong>Open</strong></td>
+     <td class="hed" style="color:black">888.00</td>
+     <td class="hed" style="width:218px;color:#333399"><strong>Vol</strong></td>
+     <td class="hed" style="color:black">941025</td>
+   </tr>
+   <tr style="color:black">
+     <td class="det" style="color:#cc3300"><strong>High</strong></td>
+     <td class="det">895.60</td>
+     <td class="det" style="color:#333399"><strong> 52 Week</strong></td>
+     <td class="det">999.70</td>
+   </tr>
+   <tr style="color:black">
+     <td class="det" style="color:#cc3300"><strong>Low</strong></td>
+     <td class="det" style="color:black">876.50</td>
+     <td class="det" style="color:#333399"><strong> Year </strong></td>
+     <td class="det" style="color:black">563.65 </td>
+   </tr>
+   <tr style="color:black">
+     <td class="det" style="color:#cc3300"><strong>Prev. Close </strong></td>
+     <td class="det">888.30</td>
+     <td class="det">&nbsp;</td>
+     <td class="det">&nbsp;</td>
+   </tr>
+ </tbody></table>
+      </div>
 
-               </div>
+      <div id="buy" class="tabcontent">
+        <!---start bid price-------->
+<div class="row">
+<div class="col-lg-7" style="margin-left:140px">
+    <div class="panel panel-default">
 
-               <!-- table close>  -->
-       </div>
+      <div class="panel-heading">Bid Price
+        <a href="javascript:void(0);" data-perform="panel-collapse" data-toggle="tooltip" title="" class="pull-right" data-original-title="Collapse Panel">
+               <em class="fa fa-minus"></em>
+               </a>
+      </div>
+      <div class="panel-wrapper collapse in" aria-expanded="true" style=""><div class="pannel panel-body">
+        <label style="font-size:15px" class="col-sm-2 control-label m-t-9">Units  </label>
+        <div class="input-group col-sm-10 m-b">
+          <input type="number" placeholder="" class="form-control text-right">
+        </div>
+        <div class="m-t-9">
+          <label class="col-sm-2 control-label m-t-9">Bid</label>
+          <div class="input-group col-sm-10 m-b">
+            <input type="number" placeholder="" class="form-control text-right">
+          </div>
+        </div>
+        <div class="row">
+          <div class="btn-group m-t-9 col-md-6 col-sm-12 col-xs-12">
+            <button style="background-color:#337ab7;border-color:#2e6da4" type="button" data-toggle="dropdown" class="btn btn-primary dropdown-toggle btn-block">Limit
+                     <span class="caret"></span>
+                     </button>
+            <ul role="menu" class="dropdown-menu">
+              <li><a href="javascript:void(0);">Limit</a>
+              </li>
+              <li><a href="javascript:void(0);">Conditional</a>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+        <div class="m-t-9">
+          <label class="col-sm-2 control-label m-t-9">Total</label>
+          <div class="input-group col-sm-10 m-b">
+            <span class="input-group-addon"><i class="fa fa-rupee"></i></span>
+            <input type="text" placeholder="" class="form-control text-right">
+          </div>
+        </div>
+        <div class="m-t-9">
+          <button style="background-color:#337ab7;border-color:#2e6da4;font-size:14px" type="button" class="btn btn-primary btn-block"><i class="fa fa-plus"></i> Buy Stock</button>
+        </div>
+      </div></div>
+    </div>
+  </div>
+
+
+
+<!---end bid price-------->
+<!-- class="col-lg-6" -->
+<!--start ask price-->
+
+<div class="col-lg-7" style="margin-left:140px">
+    <div class="panel panel-default">
+      <div class="panel-heading">Ask Price
+        <a href="javascript:void(0);" data-perform="panel-collapse" data-toggle="tooltip" title="" class="pull-right" data-original-title="Collapse Panel">
+               <em class="fa fa-minus"></em>
+               </a>
+      </div>
+      <div class="panel-wrapper collapse in" aria-expanded="true" style=""><div class="pannel panel-body">
+        <label class="col-sm-2 control-label m-t-9">Units</label>
+        <div class="input-group col-sm-10 m-b">
+          <input type="text" placeholder="" class="form-control text-right">
+        </div>
+        <div class="m-t-9">
+          <label class="col-sm-2 control-label m-t-9">Ask</label>
+          <div class="input-group m-b">
+            <input type="number" class="form-control text-right" placeholder="">
+          </div>
+        </div>
+        <div class="row">
+          <div class="btn-group m-t-9 col-md-6 col-sm-12 col-xs-12">
+            <button style="background-color:#337ab7;border-color:#2e6da4" type="button" data-toggle="dropdown" class="btn btn-primary dropdown-toggle btn-block">Limit
+                     <span class="caret"></span>
+                     </button>
+            <ul role="menu" class="dropdown-menu">
+              <li><a href="javascript:void(0);">Limit</a>
+              </li>
+              <li><a href="javascript:void(0);">Conditional</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="m-t-9">
+          <label class="col-sm-2 control-label m-t-9">Total</label>
+          <div class="input-group col-sm-10 m-b">
+            <span class="input-group-addon"><i class="fa fa-rupee"></i></span>
+            <input type="number" placeholder="" class="form-control text-right">
+          </div>
+        </div>
+        <div class="m-t-9">
+          <button style="background-color:#337ab7;border-color:#2e6da4;font-size:14px  " type="button" class="btn btn-primary btn-block"><i class="fa fa-minus"></i> Sell Stock</button>
+        </div>
+      </div></div>
+    </div>
+  </div>
+<!--end ask price-->
+</div>
+
+      </div>
+
+      <!-- table close>  -->
+</div>
+
+</div>
+</div>
+</div>
+<!-- </div> -->
+<!-- sasasa close-->
+</div>
+</div>
+
 
    <!-- Top 5 companies -->
    <div class="col-md-3">
