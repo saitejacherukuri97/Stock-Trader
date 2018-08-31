@@ -18,13 +18,8 @@
   <script src="js/fastclick.js"></script>
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-  <script>
-  function xbutton(r) {
-    var i = r.parentNode.parentNode.rowIndex;
-    document.getElementById("open_orders_table").deleteRow(i);
-}
-</script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
+  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
 
 </head>
 
@@ -318,7 +313,12 @@
                           </thead>
                           <tbody>
                             <!-- BCH Starts Here -->
-                            <tr class="clickable-row" data-href="index.html">
+
+                            <!-- if your parameter "goods" is fixed then you just rewrite url like <a href="http://www.example.com?value=goods"> goods </a>
+                            then get "goods" like this... <% String goods=request.getParameter("value");%>
+                            other ideas also available if the parameters are dynamic. -->
+
+                            <tr class="clickable-row" data-href="index.html" onclick="window.location='company.html?value=BCH'">
                               <td class="tableSmallPad">
                                 <!--RADIO 1-->
                                 <input type="radio" class="radio_item" value="" name="BCH" id="radio1">
@@ -329,9 +329,11 @@
                               <td class="text-c-blue tableSmallPad">+17.84</td>
                               <td class="tableSmallPad">Bitcoin Cash</td>
                             </tr>
+
                             <!-- BCH Ends Here -->
                             <!-- ETH Starts Here -->
-                            <tr class="clickable-row" data-href="index.html">
+
+                            <tr class="clickable-row" data-href="index.html" onclick="window.location='company.html?value=ETH'">
                               <td class="tableSmallPad"><input type="radio" class="radio_item" value="" name="ETH" id="radio10">
                                 <label class="label_item" for="radio10"> <i class="fa fa-star text-c-blue"></i> </label> ETH
                               </td>
@@ -342,7 +344,8 @@
                             </tr>
                             <!-- ETH Ends Here -->
                             <!-- XRP Starts Here -->
-                            <tr class="clickable-row" data-href="index.html">
+
+                            <tr class="clickable-row" data-href="index.html" onclick="window.location='company.html?value=XRP'">
                               <td class="tableSmallPad"><input type="radio" class="radio_item" value="" name="ETH" id="radio3">
                                 <label class="label_item" for="radio3"> <i class="fa fa-star text-c-blue"></i> </label> XRP
                               </td>
@@ -353,7 +356,8 @@
                             </tr>
                             <!-- XRP Ends Here -->
                             <!-- STR Starts Here -->
-                            <tr class="clickable-row" data-href="index.html">
+
+                            <tr class="clickable-row" data-href="index.html" onclick="window.location='company.html?value=STR'">
                               <td class="tableSmallPad"><input type="radio" class="radio_item" value="" name="ETH" id="radio4">
                                 <label class="label_item" for="radio4"> <i class="fa fa-star text-c-blue"></i> </label> STR
                               </td>
@@ -364,7 +368,7 @@
                             </tr>
                             <!-- STR Ends Here -->
                             <!-- LTC Starts Here -->
-                            <tr class="clickable-row" data-href="index.html">
+                            <tr class="clickable-row" data-href="index.html" onclick="window.location='company.html?value=LTC'">
                               <td class="tableSmallPad"><input type="radio" class="radio_item" value="" name="ETH" id="radio5">
                                 <label class="label_item" for="radio5"> <i class="fa fa-star text-c-blue"></i> </label> LTC
                               </td>
@@ -375,7 +379,7 @@
                             </tr>
                             <!-- LTC Ends Here -->
                             <!-- SC Starts Here -->
-                            <tr class="clickable-row" data-href="index.html">
+                            <tr class="clickable-row" data-href="index.html" onclick="window.location='company.html?value=SC'">
                               <td class="tableSmallPad"><input type="radio" class="radio_item" value="" name="ETH" id="radio6">
                                 <label class="label_item" for="radio6"> <i class="fa fa-star text-c-blue"></i> </label> SC
                               </td>
@@ -386,7 +390,7 @@
                             </tr>
                             <!-- SC Ends Here -->
                             <!-- Doge Starts Here -->
-                            <tr class="clickable-row" data-href="index.html">
+                            <tr class="clickable-row" data-href="index.html" onclick="window.location='company.html?value=DOGE'">
                               <td class="tableSmallPad"><input type="radio" class="radio_item" value="" name="ETH" id="radio7">
                                 <label class="label_item" for="radio7"> <i class="fa fa-star text-c-blue"></i> </label> DOGE
                               </td>
@@ -397,7 +401,7 @@
                             </tr>
                             <!-- Doge Ends Here -->
                             <!-- DBG Starts Here -->
-                            <tr class="clickable-row" data-href="index.html">
+                            <tr class="clickable-row" data-href="index.html" onclick="window.location='company.html?value=DGB'">
                               <td class="tableSmallPad"><input type="radio" class="radio_item" value="" name="ETH" id="radio8">
                                 <label class="label_item" for="radio8"> <i class="fa fa-star text-c-blue"></i> </label> DGB
                               </td>
@@ -408,7 +412,8 @@
                             </tr>
                             <!-- DGB Ends Here -->
                             <!-- NXT Starts Here -->
-                            <tr class="clickable-row" data-href="index.html">
+                        <div>
+                            <tr class="clickable-row" data-href="index.html" onclick="window.location='company.html?value=NXT'">
                               <td class="tableSmallPad"><input type="radio" class="radio_item" value="" name="ETH" id="radio9">
                                 <label class="label_item" for="radio9"> <i class="fa fa-star text-c-blue"></i> </label> NXT
                               </td>
@@ -790,7 +795,7 @@
                           <th>Units Total SC</th>
                           <th>Actual Rate</th>
                           <th>Estimated Total BTC</th>
-                          <th><i class="fa fa-times"></i></th>
+                          <th>Options</th>
                         </tr>
                       </thead>
                       <tbody>
@@ -800,16 +805,16 @@
                             02/18/2018 05:36:12 PM
                           </td>
                           <td>Limit Sell</td>
-                          <td>0.00000305</td>
+                          <td id="change">300</td>
                           <td>0.00000000</td>
                           <td>26089.00161498</td>
                           <td>
                             0.00000000
                           </td>
                           <td>0.07937253</td>
-                          <td>
-                            <a onclick="xbutton(this)"><i class="fa fa-times btn btn-danger"></i></a>
-                          </td>
+                          <!-- <td>
+
+                          </td> -->
                         </tr>
                         <tr>
                           <td><i class="fa fa-minus"></i></td>
@@ -817,16 +822,16 @@
                             02/18/2018 05:30:12 PM
                           </td>
                           <td>Limit Buy</td>
-                          <td>0.00000300</td>
+                          <td id="change">500</td>
                           <td>0.00000000</td>
                           <td>27000.00161498</td>
                           <td>
                             0.00000000
                           </td>
                           <td>0.07937253</td>
-                          <td>
-                            <a onclick="xbutton(this)"><i class="fa fa-times btn btn-danger" id="xbutton"></i></a>
-                          </td>
+                          <!-- <td>
+
+                          </td> -->
                         </tr>
                       </tbody>
                     </table>
@@ -1008,6 +1013,10 @@
   <script src="js/highcharts.js"></script>
   <script src="js/exporting.js"></script>
   <script src="js/plugins/dataTables.colVis.js"></script>
+  <script src="js/bootstable.js"></script>
+  <script>
+   $('#open_orders_table').SetEditable({ $addButton: $('#addNewRow')});
+  </script>
 
   <!--[if lt IE 8]><script src="js/excanvas.min.js"></script><![endif]-->
   <script src="js/tradify.js"></script>
